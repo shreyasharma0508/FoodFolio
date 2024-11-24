@@ -37,7 +37,7 @@ function MultiStepForm() {
 
   return (
     <div className="multi-step-form">
-      <h1 className="brand-title">ImHungry</h1>
+      <h1 className="brand-title">FoodFolio</h1>
       <ProgressBar step={step} totalSteps={7} />
       {renderStep()}
     </div>

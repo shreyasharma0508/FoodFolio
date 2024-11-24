@@ -3,7 +3,7 @@ import React from "react";
 function Navbar({ setCurrentPage }) {
   return (
     <nav className="navbar">
-      <h1>ImHungry</h1>
+      <h1>FoodFolio</h1>
       <ul>
         <li onClick={() => setCurrentPage("Dashboard")}>Dashboard</li>
         <li onClick={() => setCurrentPage("TodoList")}>To-Do List</li>
