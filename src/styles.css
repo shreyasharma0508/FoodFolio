@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.navbar {
+  background: #007bff;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.multi-step-form {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-title {
+  text-align: center;
+  color: #007bff;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-google {
+  background: #db4437;
+  color: white;
+}
+
+.btn-facebook {
+  background: #3b5998;
+  color: white;
+}
