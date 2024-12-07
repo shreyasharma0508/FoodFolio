@@ -1,12 +1,14 @@
+/* General body styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #f9f9f9; /* Light grey background */
 }
 
+/* Navbar styles */
 .navbar {
-  background: #007bff;
+  background: #4caf50; 
   padding: 10px 20px;
 }
 
@@ -20,6 +22,7 @@ body {
 
 .navbar li {
   color: white;
+  cursor: pointer;
 }
 
 .navbar a {
@@ -27,6 +30,7 @@ body {
   text-decoration: none;
 }
 
+/* Sign-in form styling */
 .multi-step-form {
   max-width: 500px;
   margin: 50px auto;
@@ -38,14 +42,14 @@ body {
 
 .brand-title {
   text-align: center;
-  color: #007bff;
+  color: #4caf50;
 }
 
 .input-field {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ddd;
+  border: 1px solid #1f1f1f;
   border-radius: 5px;
 }
 
@@ -55,7 +59,7 @@ body {
 }
 
 .btn-primary {
-  background: #007bff;
+  background: #4caf50; /* Blue background */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -68,6 +72,18 @@ body {
 }
 
 .btn-facebook {
-  background: #3b5998;
+  background: #2a742c;
   color: white;
+}
+
+/* Adjustments for consistency */
+.todo-list ul li {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list ul li.completed span {
+  text-decoration: line-through;
+  color: gray;
 }
