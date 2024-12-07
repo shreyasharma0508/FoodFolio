@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import Notes from "./components/Notes";
 import Profile from "./components/Profile";
 import ToDoList from "./components/ToDoList";
+import WasteInsights from './components/WasteInsights/WasteInsights';
 import "./styles.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/notes" element={<Notes />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/todolist" element={<ToDoList />} />
+            <Route path="/waste-insights" element={<WasteInsights />} />
           </Routes>
         </div>
       </div>
