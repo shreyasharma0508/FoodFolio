@@ -1,0 +1,105 @@
+/* General Notes Page Styles */
+.notes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .notes h2 {
+    font-size: 2rem;
+    color: #4caf50; /* Green heading */
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input Section */
+  .note-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .note-input textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  .note-input button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .note-input button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Notes Grid */
+  .note-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  /* Individual Note Styles */
+  .note {
+    background: #fff9c4; /* Light yellow */
+    width: 200px;
+    min-height: 150px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .note p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  .note small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  /* Delete Button */
+  .delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #f44336; /* Red color for "X" */
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+  }
+  
+  .delete-button:hover {
+    color: #d32f2f; /* Darker red on hover */
+  }
+  

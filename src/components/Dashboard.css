@@ -1,0 +1,120 @@
+/* General Dashboard Styles */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+.dashboard-header p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Content Layout */
+.dashboard-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.dashboard-left,
+.dashboard-right {
+  flex: 1;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.dashboard-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+/* Calendar Task Indicators */
+.dashboard-calendar {
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  margin: 1rem auto;
+}
+
+.dashboard-calendar .react-calendar__tile--active {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.dashboard-calendar .task-indicator {
+  background-color: #fffde7; /* Light yellow for task days */
+  position: relative;
+}
+
+.dashboard-calendar .task-indicator::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #4caf50; /* Green dot */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #e8f5e9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #757575;
+}
+
+.task-list li span {
+  flex: 1;
+}
+
+.delete-task {
+  background: transparent;
+  border: none;
+  color: #f44336;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-task:hover {
+  color: #d32f2f;
+  transform: scale(1.2);
+}

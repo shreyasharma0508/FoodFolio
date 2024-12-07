@@ -1,0 +1,54 @@
+/* General Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Left Side: Logo and Navigation Links */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Space between Foodfolio and the navigation links */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: #2e7d32; /* Green */
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #4caf50; /* Green for links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #2e7d32; /* Darker green on hover */
+  }
+  
+  /* Right Side: User Info */
+  .user-info {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .user-info a {
+    color: #4caf50;
+    text-decoration: none;
+  }
+  
+  .user-info a:hover {
+    text-decoration: underline;
+  }
+  

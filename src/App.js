@@ -1,22 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import MultiStepForm from "./SignIn/MultiStepForm";
-import Dashboard from "./Dashboard";
-import Notes from "./Notes";
-import Profile from "./Profile";
-import ToDoList from "./ToDoList";
+import Dashboard from "./components/Dashboard";
+import Notes from "./components/Notes";
+import Profile from "./components/Profile";
+import ToDoList from "./components/ToDoList";
+import "./styles.css";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<MultiStepForm />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/todolist" element={<ToDoList />} />
-        </Routes>
+      <div className="app">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<MultiStepForm />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/notes" element={<Notes />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/todolist" element={<ToDoList />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

@@ -1,0 +1,129 @@
+/* General Todo List Styles */
+.todo-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .todo-list h2 {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-section {
+    margin-bottom: 2rem;
+  }
+  
+  .todo-calendar {
+    border: 1px solid #4caf50;
+    border-radius: 8px;
+    margin: 1rem auto;
+  }
+  
+  .todo-calendar .react-calendar__tile--active {
+    background-color: #4caf50 !important;
+    color: white !important;
+  }
+  
+  .todo-calendar .task-indicator {
+    background-color: #fffde7; /* Light yellow for task days */
+    position: relative;
+  }
+  
+  .todo-calendar .task-indicator::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50; /* Green dot */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Task Input */
+  .task-input {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .task-input input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .task-input select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .task-input button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .task-input button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Task List */
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #e8f5e9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-list li.completed span {
+    text-decoration: line-through;
+    color: #757575;
+  }
+  
+  .task-list li span {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .task-list button {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-list button:hover {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .task-list button:nth-child(2):hover {
+    background-color: #388e3c;
+  }
+  
