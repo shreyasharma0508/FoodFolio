@@ -1,0 +1,138 @@
+/* General Container Styling */
+.profile-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* Profile Card Layout */
+.profile-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.profile-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-detail:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-icon {
+  font-size: 20px;
+  color: #007bff;
+}
+
+.profile-detail strong {
+  font-size: 16px;
+  color: #444;
+}
+
+.profile-detail span {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.profile-detail input,
+.profile-detail textarea {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+}
+
+/* Profile Actions */
+.profile-actions {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.profile-actions .btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-actions .btn-primary:hover {
+  background: #0056b3;
+}
+
+.profile-actions .btn-secondary {
+  background: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.profile-actions .btn-secondary:hover {
+  background: #5a6268;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-detail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-detail span,
+  .profile-detail input {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .profile-actions .btn-primary,
+  .profile-actions .btn-secondary {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .profile-actions .btn-secondary {
+    margin-left: 0;
+  }
+}

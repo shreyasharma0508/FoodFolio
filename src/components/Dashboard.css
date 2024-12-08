@@ -118,3 +118,68 @@
   color: #d32f2f;
   transform: scale(1.2);
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 1rem;
+  }
+
+  .dashboard-left,
+  .dashboard-right {
+    flex: none;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .dashboard-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .task-list li {
+    flex-direction: column; /* Stack task content vertically */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .delete-task {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.8rem;
+  }
+
+  .dashboard-section {
+    padding: 1rem;
+  }
+
+  .dashboard-section h3 {
+    font-size: 1rem;
+  }
+
+  .task-list li {
+    padding: 0.5rem;
+  }
+
+  .delete-task {
+    font-size: 1.2rem;
+  }
+}

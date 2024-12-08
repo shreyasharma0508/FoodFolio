@@ -1,36 +1,49 @@
-/* General body styles */
+/* General Body Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9; /* Light grey background */
+  background: #f9f9f9; /* Lighter background to align with the second file */
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
-  background: #4caf50; 
+  background: #4caf50; /* Green theme from the first file */
+  color: white;
   padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar ul {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
 }
 
-.navbar li {
-  color: white;
+.navbar ul li {
   cursor: pointer;
 }
 
-.navbar a {
-  color: white;
+.navbar ul li a {
   text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
 }
 
-/* Sign-in form styling */
+.navbar ul li a:hover {
+  color: #e8f5e9; /* Light green hover effect */
+}
+
+/* Content Area */
+.content {
+  padding: 1rem;
+}
+
+/* Multi-Step Form */
 .multi-step-form {
   max-width: 500px;
   margin: 50px auto;
@@ -42,28 +55,46 @@ body {
 
 .brand-title {
   text-align: center;
-  color: #4caf50;
+  color: #007bff;
 }
 
 .input-field {
-  width: 95%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #1f1f1f;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
+/* Buttons */
 .button-group {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between; /* Align buttons on the ends */
+  margin-top: 20px;
 }
 
 .btn-primary {
-  background: #4caf50; /* Blue background */
+  background: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
 }
 
 .btn-google {
@@ -72,18 +103,49 @@ body {
 }
 
 .btn-facebook {
-  background: #2a742c;
+  background: #3b5998;
   color: white;
 }
 
-/* Adjustments for consistency */
+/* Task List Styles */
 .todo-list ul li {
   margin: 0.5rem 0;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .todo-list ul li.completed span {
   text-decoration: line-through;
   color: gray;
+}
+
+.todo-list ul li button {
+  background: transparent;
+  border: none;
+  color: #f44336;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.todo-list ul li button:hover {
+  color: #d32f2f;
+}
+
+/* Vertical alignment for checkbox and radio groups */
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column; /* Stack options vertically */
+  gap: 10px; /* Space between options */
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: flex;
+  align-items: center; /* Align input with text */
+  gap: 8px; /* Space between input and label text */
 }

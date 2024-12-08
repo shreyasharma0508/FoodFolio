@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function StepSeven({ prevStep }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [agree, setAgree] = useState(false);
+function StepSeven({ prevStep, setUserData, userData }) {
+  const [email, setEmail] = useState(userData.email || "");
+  const [password, setPassword] = useState(userData.password || "");
+  const [agree, setAgree] = useState(userData.agree || false);
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
-    if (email && password && agree) {
-      // Simulate API call
-      console.log("Creating account with:", { email, password });
-      navigate("/dashboard");
-    } else {
-      alert("Please fill all fields and agree to terms.");
+  const handleFinish = () => {
+    if (!email || !password || !agree) {
+      alert("Please fill all fields and agree to the terms.");
+      return;
     }
+    setUserData((prev) => ({ ...prev, email, password, agree }));
+    navigate("/dashboard");
   };
 
   return (
@@ -23,31 +22,31 @@ function StepSeven({ prevStep }) {
       <p>Almost there! Enter your email and create a password.</p>
       <input
         type="email"
-        placeholder="Email Address"
-        className="input-field"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        className="input-field"
+        placeholder="Email Address"
       />
       <input
         type="password"
-        placeholder="Password"
-        className="input-field"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        className="input-field"
+        placeholder="Password"
       />
       <label>
         <input
           type="checkbox"
           checked={agree}
-          onChange={() => setAgree(!agree)}
-        />{" "}
-        I agree to Foodfolio's Terms & Conditions.
+          onChange={(e) => setAgree(e.target.checked)}
+        />
+        I agree to FoodFolio's Terms & Conditions.
       </label>
       <div className="button-group">
         <button className="btn-secondary" onClick={prevStep}>
           Back
         </button>
-        <button className="btn-primary" onClick={handleSubmit}>
+        <button className="btn-primary" onClick={handleFinish}>
           Finish
         </button>
       </div>

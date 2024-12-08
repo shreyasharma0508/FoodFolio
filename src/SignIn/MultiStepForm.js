@@ -7,8 +7,10 @@ import StepFour from "./StepFour";
 import StepFive from "./StepFive";
 import StepSix from "./StepSix";
 import StepSeven from "./StepSeven";
+import { useUser } from "../context/UserContext";
 
 function MultiStepForm() {
+  const { userData, setUserData } = useUser();
   const [step, setStep] = useState(1);
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 7));
@@ -17,19 +19,19 @@ function MultiStepForm() {
   const renderStep = () => {
     switch (step) {
       case 1:
-        return <StepOne nextStep={nextStep} />;
+        return <StepOne nextStep={nextStep} setUserData={setUserData} userData={userData} />;
       case 2:
-        return <StepTwo nextStep={nextStep} prevStep={prevStep} />;
+        return <StepTwo nextStep={nextStep} prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       case 3:
-        return <StepThree nextStep={nextStep} prevStep={prevStep} />;
+        return <StepThree nextStep={nextStep} prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       case 4:
-        return <StepFour nextStep={nextStep} prevStep={prevStep} />;
+        return <StepFour nextStep={nextStep} prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       case 5:
-        return <StepFive nextStep={nextStep} prevStep={prevStep} />;
+        return <StepFive nextStep={nextStep} prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       case 6:
-        return <StepSix nextStep={nextStep} prevStep={prevStep} />;
+        return <StepSix nextStep={nextStep} prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       case 7:
-        return <StepSeven prevStep={prevStep} />;
+        return <StepSeven prevStep={prevStep} setUserData={setUserData} userData={userData} />;
       default:
         return null;
     }
