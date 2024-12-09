@@ -25,7 +25,7 @@ function Navbar() {
       </div>
       <div className="user-info">
         <span>
-          Hi, <Link to="/profile">{userData.firstName || "John"} {userData.lastName?.charAt(0) || "D"}.</Link>
+          Hi, <Link to="/profile">{userData.firstName || "Guest"} {userData.lastName?.charAt(0) || " "}.</Link>
         </span>{" "}
         | <Link to="/logout">Logout</Link>
       </div>

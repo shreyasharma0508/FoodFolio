@@ -55,11 +55,11 @@ body {
 
 .brand-title {
   text-align: center;
-  color: #007bff;
+  color: #2e7d32;
 }
 
 .input-field {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
@@ -74,7 +74,7 @@ body {
 }
 
 .btn-primary {
-  background: #007bff;
+  background: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -82,7 +82,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: #2e7d32;
 }
 
 .btn-secondary {
