@@ -30,7 +30,8 @@
 }
 
 .dashboard-left,
-.dashboard-right {
+.dashboard-right,
+.photo-upload-section {
   flex: 1;
 }
 
@@ -53,24 +54,18 @@
 .dashboard-calendar {
   border: 1px solid #4caf50;
   border-radius: 8px;
-  margin: 1rem auto;
 }
 
 .dashboard-calendar .react-calendar__tile--active {
-  background-color: #4caf50 !important;
-  color: white !important;
-}
-
-.dashboard-calendar .task-indicator {
-  background-color: #fffde7; /* Light yellow for task days */
-  position: relative;
+  background-color: #4caf50;
+  color: white;
 }
 
 .dashboard-calendar .task-indicator::after {
   content: "";
   width: 8px;
   height: 8px;
-  background-color: #4caf50; /* Green dot */
+  background-color: #4caf50;
   border-radius: 50%;
   position: absolute;
   bottom: 5px;
@@ -83,6 +78,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-list li {
@@ -90,9 +87,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem;
-  margin-bottom: 0.5rem;
   background: #e8f5e9;
   border-radius: 8px;
+  margin-bottom: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -109,8 +106,6 @@
   background: transparent;
   border: none;
   color: #f44336;
-  font-size: 1.5rem;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -119,38 +114,84 @@
   transform: scale(1.2);
 }
 
+/* Photo Upload Section Styles */
+.photo-upload-section {
+  background: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.photo-upload-section input[type="file"] {
+  opacity: 0; /* Hide default input */
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.photo-upload-section label {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Align with other elements */
+  margin: 1rem auto;
+}
+
+.photo-upload-section label:hover {
+  background-color: #367b3a;
+}
+
+.photo-upload-section span.file-name {
+  margin-left: 10px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Grocery List Styles */
+.grocery-list {
+  max-width: 100%;
+  background: #48aa4c;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.grocery-list li {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grocery-list h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .dashboard-content {
-    flex-direction: column; /* Stack sections vertically */
-    gap: 1rem;
+    flex-direction: column;
   }
 
   .dashboard-left,
-  .dashboard-right {
+  .dashboard-right,
+  .photo-upload-section {
     flex: none;
   }
 
-  .dashboard-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .dashboard-header p {
-    font-size: 0.9rem;
-  }
-
+  .dashboard-header h2,
   .dashboard-section h3 {
-    font-size: 1.2rem;
-  }
-
-  .task-list li {
-    flex-direction: column; /* Stack task content vertically */
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .delete-task {
-    align-self: flex-end;
+    font-size: 1.5rem;
   }
 }
 
@@ -163,23 +204,7 @@
     font-size: 1.2rem;
   }
 
-  .dashboard-header p {
-    font-size: 0.8rem;
-  }
-
-  .dashboard-section {
-    padding: 1rem;
-  }
-
   .dashboard-section h3 {
     font-size: 1rem;
-  }
-
-  .task-list li {
-    padding: 0.5rem;
-  }
-
-  .delete-task {
-    font-size: 1.2rem;
   }
 }

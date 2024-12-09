@@ -7,6 +7,8 @@ function Dashboard() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [tasks, setTasks] = useState(() => JSON.parse(localStorage.getItem("tasks")) || {});
   const [newTask, setNewTask] = useState("");
+  const [image, setImage] = useState(null); // State to hold the uploaded image
+  const [groceryList, setGroceryList] = useState([]); // Placeholder state for grocery list
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -14,6 +16,13 @@ function Dashboard() {
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setImage(file);
+    // Simulate generating a grocery list (this will be dynamic in the future)
+    setGroceryList(["Tomatoes", "Milk", "Bread"]);
   };
 
   const addTask = () => {
@@ -63,7 +72,24 @@ function Dashboard() {
         <p>Manage tasks for specific dates using the calendar and to-do list.</p>
       </div>
       <div className="dashboard-content">
-        {/* Left Column */}
+        {/* Photo Upload Section */}
+        <div className="photo-upload-section">
+          <input type="file" id="file" onChange={handleImageChange} style={{ display: 'none' }} />
+          <label htmlFor="file">Upload Photo</label> {/* Styled label for file input */}
+          {image && <span className="file-name">{image.name}</span>} {/* Display selected file name */}
+
+          {image && (
+            <div className="grocery-list">
+              <h3>Grocery List</h3>
+              <ul>
+                {groceryList.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+        {/* Existing UI Components */}
         <div className="dashboard-left">
           <section className="dashboard-section calendar">
             <h3>Your Calendar</h3>
@@ -80,7 +106,6 @@ function Dashboard() {
             </p>
           </section>
         </div>
-        {/* Right Column */}
         <div className="dashboard-right">
           <section className="dashboard-section tasks">
             <h3>Tasks for {selectedDate.toDateString()}</h3>
@@ -112,6 +137,7 @@ function Dashboard() {
       </footer>
     </div>
   );
+
 }
 
 export default Dashboard;
